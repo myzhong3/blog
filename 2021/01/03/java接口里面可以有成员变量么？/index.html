@@ -20,28 +20,33 @@
     var CONFIG = {"hostname":"myzhong3.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"H3EGNTZWQC","apiKey":"5ef37fb658d50fc751ac3f4142c19667","indexName":"blog@github","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="曙光之路">
-<meta property="og:url" content="http://myzhong3.github.io/index.html">
+  <meta name="description" content="转帖 答案是：可以，但必须是public static final的，而且必须是public static final的。 既然JDK1.7开始支持接口中存在default方法和static方法，那么这些方法在实现上，难免需要成员变量提供数据支持。先看一个例子： 12345678910111213141516171819202122232425262728293031323334353637383">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ZT-java接口里面可以有成员变量么？">
+<meta property="og:url" content="http://myzhong3.github.io/2021/01/03/java%E6%8E%A5%E5%8F%A3%E9%87%8C%E9%9D%A2%E5%8F%AF%E4%BB%A5%E6%9C%89%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E4%B9%88%EF%BC%9F/index.html">
 <meta property="og:site_name" content="曙光之路">
+<meta property="og:description" content="转帖 答案是：可以，但必须是public static final的，而且必须是public static final的。 既然JDK1.7开始支持接口中存在default方法和static方法，那么这些方法在实现上，难免需要成员变量提供数据支持。先看一个例子： 12345678910111213141516171819202122232425262728293031323334353637383">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-03T09:32:32.000Z">
+<meta property="article:modified_time" content="2021-01-03T09:33:12.184Z">
 <meta property="article:author" content="Alex Zhong">
+<meta property="article:tag" content="java interface member">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://myzhong3.github.io/">
+<link rel="canonical" href="http://myzhong3.github.io/2021/01/03/java%E6%8E%A5%E5%8F%A3%E9%87%8C%E9%9D%A2%E5%8F%AF%E4%BB%A5%E6%9C%89%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E4%B9%88%EF%BC%9F/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>曙光之路</title>
+  <title>ZT-java接口里面可以有成员变量么？ | 曙光之路</title>
   
 
 
@@ -164,9 +169,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -182,10 +188,9 @@
       <meta itemprop="name" content="曙光之路">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/03/java%E6%8E%A5%E5%8F%A3%E9%87%8C%E9%9D%A2%E5%8F%AF%E4%BB%A5%E6%9C%89%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E4%B9%88%EF%BC%9F/" class="post-title-link" itemprop="url">ZT-java接口里面可以有成员变量么？</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          ZT-java接口里面可以有成员变量么？
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -209,7 +214,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>转帖</p>
+        <p>转帖</p>
 <p>答案是：<strong>可以，但必须是public static final的</strong>，而且必须是public static final的。</p>
 <p><strong>既然JDK1.7开始支持接口中存在default方法和static方法，那么这些方法在实现上，难免需要成员变量提供数据支持。</strong><br>先看一个例子：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//基于JDK1.8</span></span><br><span class="line"><span class="comment">//IA.java</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IA</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">double</span> NUM = <span class="number">1</span>;<span class="comment">//等价于public static final double NUM = 1;</span></span><br><span class="line">    String name = <span class="string">&quot;IA&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">say</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;IA:print()&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">pritA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;IA: &quot;</span> + name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//IB.java</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IB</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">200</span>;</span><br><span class="line">    <span class="keyword">double</span> NUM = <span class="number">2</span>;</span><br><span class="line">    String name = <span class="string">&quot;IB&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">say</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;IB:print()&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">pritB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;IB: &quot;</span> + name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//AB.java</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AB</span> <span class="keyword">implements</span> <span class="title">IA</span>, <span class="title">IB</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        AB ab = <span class="keyword">new</span> AB();</span><br><span class="line">        <span class="comment">//ab.name 报错，不能确定是IA中的name还是IB中的</span></span><br><span class="line">        System.out.println(a);<span class="comment">//100  因为a和b本质上是静态成员，在静态方法里面可以直接访问</span></span><br><span class="line">        System.out.println(b);<span class="comment">//200</span></span><br><span class="line">        System.out.println(IA.NUM);<span class="comment">//1.0</span></span><br><span class="line">        System.out.println(IB.NUM);<span class="comment">//2.0</span></span><br><span class="line">        System.out.println(IA.name);<span class="comment">//IA</span></span><br><span class="line">        System.out.println(IB.name);<span class="comment">//IB</span></span><br><span class="line">        ab.say();<span class="comment">//AB:say()</span></span><br><span class="line">        ab.print();<span class="comment">//AB:print()</span></span><br><span class="line">        ab.pritA();<span class="comment">//IA: IA</span></span><br><span class="line">        ab.pritB();<span class="comment">//IB: IB</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//必须实现接口中未实现的方法，并且根据排序规则，实现的是IA中的say()</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;AB:say()&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//必须重写IA和IB中重复(签名相同)的default方法，否则调用print时不知道调用IA中的实现，还是IB中的。</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;AB:print()&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="number">123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960</span></span><br></pre></td></tr></table></figure>
@@ -222,286 +227,33 @@
 <li><strong>子类实现多个接口，多个接口中有同样签名的方法时，根据排序规则，以写在前面的接口为准。如果父接口中的default方法有重复，则子类必须重写此方法（不然，多个接口中分别提供了各自的实现，子类会不知道调用哪一个）。</strong></li>
 </ol>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/java-interface-member/" rel="tag"># java interface member</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://myzhong3.github.io/2021/01/03/default-method-in-java-interface/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Alex Zhong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="曙光之路">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/03/default-method-in-java-interface/" class="post-title-link" itemprop="url">default method in java interface</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-01-03 17:25:53 / 修改时间：17:26:41" itemprop="dateCreated datePublished" datetime="2021-01-03T17:25:53+08:00">2021-01-03</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>在Java中可以为接口定义一个默认方法的实现，使用的关键字就是<strong>default</strong>，有了默认方法，实现类就可以不对接口中的默认方法进行重写。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//为person接口定义两个默认的实现方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;i am person&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;eat&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//张三类去实现Person接口中的print()方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Zhangsan</span> <span class="keyword">implements</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;i am zhangsan&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> person = <span class="keyword">new</span> Zhangsan();</span><br><span class="line">        person.print();</span><br><span class="line">        person.eat();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行结果：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i am zhangsan</span><br><span class="line">eat</span><br></pre></td></tr></table></figure>
+        
 
 
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/01/03/default-method-in-java-interface/" rel="prev" title="default method in java interface">
+      <i class="fa fa-chevron-left"></i> default method in java interface
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://myzhong3.github.io/2020/12/20/ZT-Hexo-Github-Page/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Alex Zhong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="曙光之路">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/20/ZT-Hexo-Github-Page/" class="post-title-link" itemprop="url">ZT-Hexo+Github Page</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-12-20 11:54:19 / 修改时间：12:20:45" itemprop="dateCreated datePublished" datetime="2020-12-20T11:54:19+08:00">2020-12-20</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="超详细Hexo-Github-Page搭建技术博客教程【持续更新】"><a href="#超详细Hexo-Github-Page搭建技术博客教程【持续更新】" class="headerlink" title="超详细Hexo+Github Page搭建技术博客教程【持续更新】"></a>超详细Hexo+Github Page搭建技术博客教程【持续更新】</h1><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000017986794">https://segmentfault.com/a/1190000017986794</a> </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://myzhong3.github.io/2020/12/06/How-to-use-hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Alex Zhong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="曙光之路">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/06/How-to-use-hexo/" class="post-title-link" itemprop="url">How to use hexo</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-12-06 14:42:35 / 修改时间：15:13:51" itemprop="dateCreated datePublished" datetime="2020-12-06T14:42:35+08:00">2020-12-06</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>create post</p>
-<p><code>hexo new &#39;title&#39;</code></p>
-<p>generate hexo</p>
-<p><code>hexo g</code></p>
-<p>deploy locally</p>
-<p><code>hexo s</code></p>
-<p>Clean cache</p>
-<p><code>hexo clean</code></p>
-<p>generate and deploy remote</p>
-<p><code>hexo g -d</code></p>
-<p>create draft and publish draft</p>
-<p><code>hexo new draft &#39;title&#39;</code></p>
-<p><code>hexo publish &#39;title&#39;</code></p>
-<p><img src="http://ww1.sinaimg.cn/large/3f6659a0ly1gle5mbblctj20zb0js4c7.jpg" alt="this is a test pic"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://myzhong3.github.io/2020/12/06/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Alex Zhong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="曙光之路">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/06/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-12-06 11:23:00" itemprop="dateCreated datePublished" datetime="2020-12-06T11:23:00+08:00">2020-12-06</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
